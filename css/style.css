@@ -1,0 +1,150 @@
+/* for reseting browser added css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ::-moz-selection {
+    color: aliceblue;
+    background: #6e7785;
+  }
+  
+  ::selection {
+    color: aliceblue;
+    background: #6e7785;
+  } */
+
+.hero {
+  /* height: 100vh; */
+  /* background: url(images/hero-img.svg); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  background: #406882;
+  background: #e5e5e5;
+  background: #66a1c9;
+
+  padding: 25px;
+}
+
+.hero-img {
+  max-width: 100%;
+
+  /* padding: 20px; */
+  /* position: absolute;
+    bottom: 0;
+    z-index: -1; */
+}
+
+.about {
+  /* height: 100vh; */
+}
+
+.notes {
+  /* margin-top: 30px; */
+  padding: 20px;
+  font-size: 10px;
+  padding-bottom: 0;
+}
+
+.notes h4 {
+  font-size: 12px;
+}
+
+.notes p {
+  text-align: justify;
+}
+
+#heading {
+  font-size: 10px;
+  margin-bottom: 0;
+  padding: 20px;
+}
+
+#heading a {
+  text-decoration: none;
+}
+
+.cards-container {
+  display: flex;
+  /* background: rgb(199, 199, 199); */
+  flex-direction: row;
+  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 15px;
+  /* height: 5rem;
+  width: 12.5rem; */
+  /* border: 2px solid #e5e5e5; */
+  /* border-radius: 5px; */
+  background: transparent;
+  border: none;
+}
+
+.card img {
+  height: 80px;
+  width: 80px;
+  padding: 8px;
+}
+
+figcaption {
+  text-align: center;
+  padding: 5px;
+}
+
+.card:hover {
+  /* box-shadow: 3px 5px 10px black; */
+
+  /* text-shadow: 2px 2px 5px black; */
+  border: 1px solid black;
+}
+
+/* for desktop  */
+@media only screen and (min-width: 500px) {
+  .Container {
+  }
+  .hero-img {
+    margin-top: 0;
+    position: relative;
+    margin: 0 auto;
+    background-position: center;
+  }
+
+  .hero {
+    height: 100vh;
+    background-size: 20%;
+  }
+
+  .notes {
+    /* margin-top: 30px; */
+    padding: 20px;
+    font-size: 12px;
+    padding-bottom: 0;
+  }
+
+  .notes h4 {
+    font-size: 15px;
+  }
+  .notes p li {
+    font-size: 13px;
+  }
+
+  #heading {
+    font-size: 14px;
+    margin-bottom: 0;
+    padding: 20px;
+  }
+
+  #heading a {
+    text-decoration: none;
+  }
+}
