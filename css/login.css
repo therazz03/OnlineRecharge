@@ -61,4 +61,7 @@
   .container img {
     display: none;
   }
+  .Input {
+    width: 250px;
+  }
 }

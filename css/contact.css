@@ -2,4 +2,59 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+}
+
+.contact {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Input {
+  width: 300px;
+  border: 2px solid black;
+  margin: 5px;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.subbtn {
+  width: 100px;
+  background: whitesmoke;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.subbtn:hover {
+  background: gray;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+}
+
+@media only screen and (min-width: 500px) {
+  .contact img {
+    z-index: -1;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contact img {
+    display: none;
+  }
+
+  .Input {
+    width: 250px;
+  }
 }

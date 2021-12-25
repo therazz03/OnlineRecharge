@@ -23,7 +23,8 @@
                 <h3>to continue with your account</h3>
                 <input type="text" name="username" id="username" placeholder="Enter Your Username" class="Input">
                 <input type="password" name="password" id="password" placeholder="Enter Your password" class="Input">
-                <button type="submit" name="mybtn" class="mybtn1">Login</button>
+                <button type="submit" name="mybtn" class="mybtn1">Sign In</button>
+                <a href="signup.php" style="font-size: 14px; text-decoration: none">Don't have a account? Sign Up</a>
             </div>
         </form>
     </div>

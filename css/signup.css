@@ -2,4 +2,67 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+}
+
+.form-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .signup {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+} */
+
+.Input {
+  /* display: block; */
+  width: 300px;
+  border: 2px solid black;
+  margin: 5px;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.subbtn {
+  width: 100px;
+  background: whitesmoke;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 15px 100px;
+  align-self: center;
+}
+
+.subbtn:hover {
+  background: gray;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+}
+
+@media only screen and (min-width: 500px) {
+  .form-container img {
+    z-index: -1;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .form-container img {
+    display: none;
+  }
+  .Input {
+    width: 250px;
+  }
 }

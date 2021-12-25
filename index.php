@@ -21,34 +21,33 @@
       Modern approach to keep all your devices recharged all the time
     </h4>
   </div>
-  <div class="hero-img">
+  <!-- <div class="hero-img">
     <div class="cards-container">
       <div class="card">
-        <!-- <h3>Mobile Recharge</h3> -->
         <img src="images/phone.svg" alt="phone-recharge">
         <figcaption>Mobile</figcaption>
       </div>
       <div class="card">
-        <!-- <h3>DTH Recharge</h3> -->
         <img src="images/dth.svg" alt="dth-recharge">
         <figcaption>DTH Recharge</figcaption>
       </div>
       <div class="card">
-        <!-- <h3>Bills Payments</h3> -->
         <img src="images/bill.svg" alt="bill-payments">
         <figcaption>Bill Payments</figcaption>
 
       </div>
     </div>
+  </div> -->
+  <div class="hero-img">
+    <img src="images/hero-img.svg" alt="hero-image">
   </div>
-  <!-- <img src="images/hero-img.svg" alt="hero-img" class="hero-img" /> -->
   </main>
   <!-- hero ends here  -->
   <hr />
 
   <section class="about">
     <h3 id="heading">
-      <a href="/index.html"><strong>Home</strong></a>>Mobile Recharge
+      <a href="index.php"><strong>Home</strong></a>>Mobile Recharge
     </h3>
     <div class="notes">
       <h4>
