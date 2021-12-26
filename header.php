@@ -42,9 +42,6 @@
             <li class="nav-item">
               <a class="nav-link Link" href="dashboard.php">Dashboard</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link Link dropdown" href="recharge.php">Recharge</a>
-            </li> -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Recharge
@@ -67,7 +64,6 @@
         </div>
       </div>
     </nav>
-
   </div>
 
 </body>

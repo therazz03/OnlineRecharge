@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="shortcut icon" href="images/ors-logo1.png" type="image/x-icon">
     <title>Contact Us</title>
     <style>
         .faq {
@@ -38,7 +39,7 @@
     </header>
     <div class="contact">
         <img src="images/contact-us.svg" alt="contact-us-bg">
-        <form action="contact.php" method="post" id="contactus">
+        <form action="contact.php" method="post" id="contact-us">
             <h1>Contact Us</h1>
             <h3 style="font-size: 20px; text-align:center">Fill up these details to contact</h3>
             <p style="font-size: 14px; text-align:justify">We'll respond with you within 24 hours</p>
@@ -49,7 +50,7 @@
         </form>
     </div>
     <div class="faq">
-        <h1>FAQ</h1>
+        <h1 style="color: #6C63FF;">FAQ</h1>
         <h3>Recharge Related</h3>
         <div class="faqs">
             <h5>How many recharges can be done in a day?</h5>
@@ -81,7 +82,7 @@
             <h5>I have recharged a wrong DTH account. Can you cancel DTH recharge?</h5>
             <p>DTH recharges cannot be cancelled on Freecharge once you have made the payment successfully. For further assistance, we request you to contact your service provider for support.</p>
         </div>
-        <p>Didn't find what you are looking for <a href="#contactus" style="text-decoration: none;">contact us</a>.</p>
+        <p>Didn't find what you are looking for <a href="#contact-us" style="text-decoration: none;">contact us</a>.</p>
 
     </div>
     <footer>
