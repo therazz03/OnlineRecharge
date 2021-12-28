@@ -45,7 +45,7 @@
             <p style="font-size: 14px; text-align:justify">We'll respond with you within 24 hours</p>
             <input type="text" name="name" id="name" placeholder="Enter Your Name" class="Input">
             <input type="email" name="email" id="email" placeholder="Enter Your Email" class="Input">
-            <textarea name="disc" id="desc" cols="30" rows="6" placeholder="Enter Your Quary Here" style="resize:none" class="Input"></textarea>
+            <textarea name="disc" id="desc" cols="30" rows="6" placeholder="Enter Your Query Here" style="resize:none" class="Input"></textarea>
             <button type="submit" name="subbtn" class="subbtn">Submit</button>
         </form>
     </div>

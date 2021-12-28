@@ -4,3 +4,8 @@
   box-sizing: border-box;
   font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
 }
+
+.dashboard {
+  height: 80vh;
+  background: url("images/dashboard-bg.png");
+}

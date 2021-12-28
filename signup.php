@@ -1,3 +1,26 @@
+<?php
+// $flag = false;
+// include('conn.php');
+// if (isset($_POST['subbtn'])) {
+//   $name = $_POST['uname'];
+//   $password = $_POST['passwd'];
+//   $phone = $_POST['pno'];
+//   $email = $_POST['uemail'];
+
+//   $sql = "INSERT INTO `userdata`(`name`, `phone_no`, `password`, `email`, `dt`) VALUES ('$name','$phone','$password','$email',current_timestamp())";
+
+//   if ($conn->query($sql) != null) {
+//     header("Location: http://localhost/OnlineRecharge/login.php");
+//     echo "did it";
+//     die;
+//   } else {
+//     $flag = true;
+//     echo "failed";
+//   }
+
+// }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +52,7 @@
       <input type="password" placeholder="Enter Your Password Again" name="passwd" id="passwd" class="Input" />
       <input type="email" placeholder="Enter Your Email" name="uemail" id="uemail" class="Input" />
       <label for="accept" style="font-size: 14px;"><input type="checkbox" name="accept" id="accept" required> I hereby accept all the <a href="terms.php" style="text-decoration: none;">terms & conditions</a>.</label>
-      <button type="submit" class="subbtn" name="subbtm">
+      <button type="submit" class="subbtn" name="subbtn">
         Sign Up
       </button>
       <a href="login.php" style="font-size: 14px; text-decoration: none; display: block; text-align: center;">Already have a account? Sign In</a>

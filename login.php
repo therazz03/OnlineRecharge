@@ -1,3 +1,23 @@
+<?php
+
+include('conn.php');
+$flag = false;
+if (isset($_POST['mybtn'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $query = "SELECT * From `userdata` where lower(uname)= '$username' and '$password' = password";
+
+    if (mysqli_fetch_assoc($conn->query($query)) != null) {
+        // $flag = true;
+        header("Location: http://localhost/OnlineRecharge/dashboard.php");
+        die;
+    } else {
+        $flag = true;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +42,9 @@
             <div class="login">
                 <h1>Sign In</h1>
                 <h3>to continue with your account</h3>
+                <?php
+                check($flag);
+                ?>
                 <input type="text" name="username" id="username" placeholder="Enter Your Username" class="Input">
                 <input type="password" name="password" id="password" placeholder="Enter Your password" class="Input">
                 <button type="submit" name="mybtn" class="mybtn1">Sign In</button>
