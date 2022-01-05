@@ -6,6 +6,19 @@
 }
 
 .dashboard {
-  height: 80vh;
-  background: url("images/dashboard-bg.png");
+  /* height: 80vh; */
+  /* padding: 24px; */
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #66a1c9;
+  padding: 14px;
+}
+
+.transactions {
+  padding: 24px;
 }
