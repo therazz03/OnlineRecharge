@@ -42,16 +42,19 @@
             <li class="nav-item">
               <a class="nav-link Link" href="dashboard.php">Dashboard</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item">
+              <a class="nav-link Link" href="recharge.php">Recharge</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="recharge.php" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Recharge
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: whitesmoke;">
-                <li><a class="dropdown-item" href="recharge.php">Mobile Recharge</a></li>
-                <li><a class="dropdown-item" href="#">DTH Reacharge</a></li>
-                <li><a class="dropdown-item" href="#">Pay Bills</a></li>
+                <li><a class="dropdown-item" href="recharge.php#phn">Mobile Recharge</a></li>
+                <li><a class="dropdown-item" href="recharge.php#dth">DTH Reacharge</a></li>
+                <li><a class="dropdown-item" href="recharge.php#ccpay">Pay Bills</a></li>
               </ul>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link Link" href="contact.php">Contact Us</a>
             </li>

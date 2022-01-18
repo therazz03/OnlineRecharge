@@ -1,3 +1,26 @@
+<?php
+$flag = false;
+include('conn.php');
+// if ($conn) {
+//     echo " connected";
+// }
+if (isset($_POST['subbtn'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $desc = $_POST['desc'];
+
+    $sql = "INSERT INTO `support`(`name`, `email`, `concern`, `dt`) VALUES ('$name','$email','$desc', current_timestamp())";
+
+    if ($conn->query($sql)) {
+        header("Location: http://localhost/OnlineRecharge/contact.php");
+        die;
+    } else {
+        $flag = true;
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +68,14 @@
             <p style="font-size: 14px; text-align:justify">We'll respond with you within 24 hours</p>
             <input type="text" name="name" id="name" placeholder="Enter Your Name" class="Input">
             <input type="email" name="email" id="email" placeholder="Enter Your Email" class="Input">
-            <textarea name="disc" id="desc" cols="30" rows="6" placeholder="Enter Your Query Here" style="resize:none" class="Input"></textarea>
+            <textarea name="desc" id="desc" cols="30" rows="6" placeholder="Enter Your Query Here" style="resize:none" class="Input"></textarea>
+            <?php
+            if ($flag) {
+                echo "
+                        <p style='color:red; font-size:14px'>Can not submit your responce try again</p>
+                        ";
+            }
+            ?>
             <button type="submit" name="subbtn" class="subbtn">Submit</button>
         </form>
     </div>

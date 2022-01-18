@@ -3,13 +3,12 @@
 include('conn.php');
 $flag = false;
 if (isset($_POST['mybtn'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $phone = $_POST['phone'];
+    $password = hash('sha256', $_POST['password']);
 
-    $query = "SELECT * From `userdata` where lower(uname)= '$username' and '$password' = password";
+    $sql = "SELECT * From `members` where phone= '$phone' and '$password' = password";
 
-    if (mysqli_fetch_assoc($conn->query($query)) != null) {
-        // $flag = true;
+    if ($conn->query($sql)) {
         header("Location: http://localhost/OnlineRecharge/dashboard.php");
         die;
     } else {
@@ -43,9 +42,9 @@ if (isset($_POST['mybtn'])) {
                 <h1>Sign In</h1>
                 <h3>to continue with your account</h3>
                 <?php
-                check($flag);
+                incorrect_user_check($flag);
                 ?>
-                <input type="text" name="username" id="username" placeholder="Enter Your Username" class="Input">
+                <input type="text" name="phone" id="phone" placeholder="Enter Your Phone No" class="Input">
                 <input type="password" name="password" id="password" placeholder="Enter Your password" class="Input">
                 <button type="submit" name="mybtn" class="mybtn1">Sign In</button>
                 <a href="forget.php" style="font-size: 14px; text-decoration: none">Forget Password?</a>

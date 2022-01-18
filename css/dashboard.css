@@ -6,7 +6,7 @@
 }
 
 .dashboard {
-  /* height: 80vh; */
+  height: 100vh;
   /* padding: 24px; */
 }
 
@@ -21,4 +21,6 @@
 
 .transactions {
   padding: 24px;
+  overflow-x: scroll;
+  height: 60vh;
 }

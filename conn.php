@@ -2,7 +2,7 @@
 $server = "localhost";
 $username = "root";
 $password = "";
-$dbname = "testing";
+$dbname = "OnlineRecharge";
 
 
 $conn = mysqli_connect($server, $username, $password, $dbname);
@@ -12,11 +12,17 @@ if (!$conn) {
 }
 
 
-
 // function for checking correct username & password 
-function check($flag)
+function incorrect_user_check($flag)
 {
     if ($flag == true) {
         echo "<p style='color: red;'>Incorrect username/password.</p>";
     }
+}
+
+function successfully_submit_responce($flag)
+{
+    echo "
+                <p style='color:green; font-size:14px'>Successfully Submitted</p>
+                ";
 }

@@ -4,3 +4,128 @@
   box-sizing: border-box;
   font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
 }
+
+.Container {
+  height: 75vh;
+}
+
+#modes {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #66a1c9;
+}
+
+#modes a {
+  text-decoration: none;
+  color: black;
+}
+
+#modes ul {
+  padding: 0;
+}
+
+#modes li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+  margin-top: 35px;
+  border: 1px solid whitesmoke;
+  border-radius: 7px;
+  padding: 5px;
+  box-shadow: 2px 2px 5px black;
+  width: 100px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+#modes li:hover {
+  border: 1.5px solid black;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.pages {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Card {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 24px;
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 3px 3px 7px black, -3px -3px 7px white;
+
+  /* till js not used */
+  margin-top: 80px;
+}
+
+.Card:hover {
+  box-shadow: none;
+  border: 1px solid black;
+}
+
+.Card input {
+  width: 100%;
+  margin: 5px;
+  padding: 3px;
+  border: 1px solid rgb(156, 156, 156);
+  border-radius: 5px;
+}
+
+.Card select {
+  width: 100%;
+  margin: 5px;
+  border: 2px solid whitesmoke;
+  border: 1px solid rgb(156, 156, 156);
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.Card button {
+  width: 100%;
+  margin: 5px;
+  border: 1px solid black;
+  border: 2px solid whitesmoke;
+  border: 1px solid rgb(156, 156, 156);
+  border-radius: 5px;
+}
+
+.active {
+  display: flex;
+}
+
+@media only screen and (min-width: 500px) {
+  .section img {
+    z-index: -1;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .section img {
+    display: none;
+  }
+  .Input {
+    width: 250px;
+  }
+
+  .Container {
+    height: fit-content;
+  }
+
+  .Card {
+    width: 80%;
+    margin-bottom: 34px;
+  }
+}
