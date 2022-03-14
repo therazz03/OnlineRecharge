@@ -9,6 +9,10 @@
     <!-- <link rel="stylesheet" href="/bootstrap/bootstrap/css/bootstrap.min.css">
     <script src="/bootstrap/bootstrap/js/bootstrap.min.js"></script>
     <script src="/bootstrap/bootstrap/js/jquery.min.js"></script> -->
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
     <link rel="stylesheet" href="css/recharge.css">
     <title>Recharge</title>
 </head>
@@ -28,6 +32,9 @@
                     <li><a href="recharge.php#ccpay" class="Btn">Credit Card</a></li>
                 </ul>
             </div> -->
+            <div class="top">
+                <h3>Recharges made easy</h3>
+            </div>
             <div class="pages" id="Page">
                 <div class="phone Card" id="phn">
                     <p style="text-align: left; padding-left:5px">Phone Recharge</p>
@@ -78,6 +85,9 @@
                     </form>
                 </div>
             </div>
+
+
+
         </div>
     </div>
     <footer>

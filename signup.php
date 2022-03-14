@@ -38,19 +38,19 @@ if (isset($_POST['subbtn'])) {
   </header>
   <div class="form-container">
     <img src="images/sign-up.svg" alt="">
-    <form action="signup.php" method="post">
+    <form action="signup.php" method="post" onsubmit="return validater()">
       <div class="signup"></div>
 
       <h1 style="text-align: center;">Sign Up</h1>
       <h3 style="text-align: center; font-size: 20px;">to continue with our site</h3>
-      <input type="text" placeholder="Enter Your Name" name="uname" id="uname" class="Input" />
-      <input type="text" placeholder="Enter Your Phone Number" name="pno" id="pno" class="Input" />
-      <input type="password" placeholder="Enter Your Password" name="passwd" id="passwd1" class="Input" />
-      <input type="password" placeholder="Enter Your Password Again" name="passwd" id="passwd2" class="Input" />
+      <input type="text" placeholder="Enter Your Name" name="uname" id="uname" class="Input" required />
+      <input type="text" placeholder="Enter Your Phone Number" name="pno" id="pno" class="Input" required />
+      <input type="password" placeholder="Enter Your Password" name="passwd" id="passwd1" class="Input" required />
+      <input type="password" placeholder="Enter Your Password Again" name="passwd" id="passwd2" class="Input" onkeyup="pass_validater()" required />
       <p id="pass_validater" style="color: red; font-size:14px; margin:0; display:none">Password doesn't match</p>
-      <input type="email" placeholder="Enter Your Email" name="uemail" id="uemail" class="Input" />
+      <input type="email" placeholder="Enter Your Email" name="uemail" id="uemail" class="Input" required />
       <label for="accept" style="font-size: 14px;"><input type="checkbox" name="accept" id="accept" required> I hereby accept all the <a href="terms.php" style="text-decoration: none;">terms & conditions</a>.</label>
-      <button type="submit" class="subbtn" name="subbtn" onclick="validate_password()">
+      <button type="submit" class="subbtn" name="subbtn">
         Sign Up
       </button>
       <?php
@@ -71,16 +71,82 @@ if (isset($_POST['subbtn'])) {
   </footer>
 
   <script>
-    function validate_password() {
+    // function validate_password() {
+    //   var pass1 = document.getElementById("passwd1").value;
+    //   var pass2 = document.getElementById("passwd2").value;
+
+    //   if (pass1 != pass2) {
+    //     document.getElementById("pass_validater").style.display = "flex";
+    //   } else {
+    //     document.getElementById("pass_validater").style.display = "none";
+    //   }
+    // }
+
+    // function to check if password is same or not 
+    function pass_validater() {
       var pass1 = document.getElementById("passwd1").value;
       var pass2 = document.getElementById("passwd2").value;
 
       if (pass1 != pass2) {
         document.getElementById("pass_validater").style.display = "flex";
-        <?php
-        $flag = true;
-        ?>
+      } else {
+        document.getElementById("pass_validater").style.display = "none";
       }
+    }
+
+    // function to check valid fields
+    function validater() {
+      var isValid = true
+      var val
+
+      // for name validation
+      val = document.getElementById("uname").value
+      if (val.length < 3) {
+        document.getElementById("uname").style.border = "2px solid red"
+        isValid = false
+      } else {
+        document.getElementById("uname").style.border = "2px solid black"
+      }
+
+      // for phone number validation
+      val = document.getElementById("pno").value
+      if (val.length < 10) {
+        document.getElementById("pno").style.border = " 2px solid red"
+        isValid = false
+      } else {
+        document.getElementById("pno").style.border = "2px solid black"
+      }
+
+      // for password validation
+      val = document.getElementById("passwd1")
+      if (val.length < 7) {
+        document.getElementById("passwd1").style.border = "2px solid red"
+        isValid = false
+      } else {
+        var c_u = 0,
+          c_l = 0,
+          c_n = 0,
+          c_s = 0
+
+        for (i = 0; i < val.length; i++) {
+          if (val[i] >= 'A' && val[i] <= 'Z')
+            c_u++;
+          else if (val[i] >= 'a' && val[i] <= 'z')
+            c_l++;
+          else if (val[i] >= '0' && val[i] <= '9')
+            c_n++;
+          else
+            c_s++;
+        }
+
+        if (c_u >= 1 && c_l >= 3 && c_n >= 1 && c_s >= 1) {
+          document.getElementById("passwd1").style.border = "2px solid black"
+        } else {
+          document.getElementById("passwd1").style.border = "2px solid red"
+          isValid = false
+        }
+      }
+      return isValid
     }
   </script>
 </body>

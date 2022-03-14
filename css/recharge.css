@@ -6,7 +6,14 @@
 }
 
 .Container {
-  height: 75vh;
+  height: 90vh;
+}
+
+.top {
+  width: 100%;
+  text-align: center;
+  background: #66a1c9;
+  padding: 25px;
 }
 
 #modes {

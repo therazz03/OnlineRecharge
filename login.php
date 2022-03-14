@@ -1,12 +1,11 @@
 <?php
-
 include('conn.php');
 $flag = false;
 if (isset($_POST['mybtn'])) {
     $phone = $_POST['phone'];
     $password = hash('sha256', $_POST['password']);
 
-    $sql = "SELECT * From `members` where phone= '$phone' and '$password' = password";
+    $sql = "SELECT * From `members` where phone= '$phone' and password = '$password'";
 
     if ($conn->query($sql)) {
         header("Location: http://localhost/OnlineRecharge/dashboard.php");
