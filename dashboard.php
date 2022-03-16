@@ -1,9 +1,10 @@
-<!-- <?php
-        // session_start();
-        // if (!isset($_SESSION['user_id'])) {
-        //     header("Location: http://localhost/OnlineRecharge/login.php");
-        // }
-        ?> -->
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: http://localhost/OnlineRecharge/login.php");
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,10 +28,10 @@
         <div class="user">
             <img src="images/male_avatar.svg" alt="user avatar" style="height: 100px; width: 100px">
             <!-- this heading will be replaced with php code that will show the current user name and his remaining balance -->
-            <h1>User Name</h1>
-            <h5>User Email</h5>
-            <h5>User Phone No</h5>
-            <h5>Balance: 5000</h5>
+            <?php echo  "<h3 class='user-data'>" . " Welcome "  . $_SESSION['username'] . "</h3>"  ?>
+            <?php echo  "<h3 class='user-data'>" . "Phone: " . $_SESSION['phone'] . "</h3>"  ?>
+            <?php echo "<h3 class='user-data'>" . "Email: " . $_SESSION['email'] . "</h3>" ?>
+
         </div>
         <div class="transactions">
             <h3>Previous Transactions</h3>

@@ -1,5 +1,6 @@
 <?php
 $flag = false;
+$pass_flag = false;
 include('conn.php');
 if (isset($_POST['subbtn'])) {
   $name = $_POST['uname'];
@@ -8,12 +9,17 @@ if (isset($_POST['subbtn'])) {
   $email = $_POST['uemail'];
 
   $sql = "INSERT INTO `members`(`name`, `password`, `phone`, `email`, `dt`) VALUES ('$name','$password','$phone','$email',current_timestamp())";
+  $sql1 = "SELECT * FROM `members` where phone = '$phone' or email = '$email'";
 
-  if ($conn->query($sql)) {
-    header("Location: http://localhost/OnlineRecharge/login.php");
-    die;
+  if (mysqli_num_rows($conn->query($sql1)) > 0) {
+    $pass_flag = true;
   } else {
-    $flag = true;
+    if ($conn->query($sql)) {
+      header("Location: http://localhost/OnlineRecharge/login.php");
+      die;
+    } else {
+      $flag = true;
+    }
   }
 }
 ?>
@@ -43,6 +49,13 @@ if (isset($_POST['subbtn'])) {
 
       <h1 style="text-align: center;">Sign Up</h1>
       <h3 style="text-align: center; font-size: 20px;">to continue with our site</h3>
+      <?php
+      if ($pass_flag) {
+        echo "
+        <p id='acc_check' style='color: red; font-size:14px; margin:0; display:flex'>Email/Phone no already in use</p>
+        ";
+      }
+      ?>
       <input type="text" placeholder="Enter Your Name" name="uname" id="uname" class="Input" required />
       <input type="text" placeholder="Enter Your Phone Number" name="pno" id="pno" class="Input" required />
       <input type="password" placeholder="Enter Your Password" name="passwd" id="passwd1" class="Input" required />
@@ -110,7 +123,7 @@ if (isset($_POST['subbtn'])) {
 
       // for phone number validation
       val = document.getElementById("pno").value
-      if (val.length < 10) {
+      if (val.length != 10) {
         document.getElementById("pno").style.border = " 2px solid red"
         isValid = false
       } else {
@@ -118,7 +131,7 @@ if (isset($_POST['subbtn'])) {
       }
 
       // for password validation
-      val = document.getElementById("passwd1")
+      val = document.getElementById("passwd1").value
       if (val.length < 7) {
         document.getElementById("passwd1").style.border = "2px solid red"
         isValid = false
@@ -138,6 +151,7 @@ if (isset($_POST['subbtn'])) {
           else
             c_s++;
         }
+
 
         if (c_u >= 1 && c_l >= 3 && c_n >= 1 && c_s >= 1) {
           document.getElementById("passwd1").style.border = "2px solid black"

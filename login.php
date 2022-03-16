@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('conn.php');
 $flag = false;
 if (isset($_POST['mybtn'])) {
@@ -7,9 +8,26 @@ if (isset($_POST['mybtn'])) {
 
     $sql = "SELECT * From `members` where phone= '$phone' and password = '$password'";
 
-    if ($conn->query($sql)) {
+    if (mysqli_num_rows($conn->query($sql)) > 0) {
+        $sql = "SELECT name, phone, email FROM members where phone= '$phone' and password = '$password'";
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+
+        $_SESSION['username'] = $row["name"];
+        $_SESSION['phone'] = $row["phone"];
+        $_SESSION['email'] = $row["email"];
+
+
         header("Location: http://localhost/OnlineRecharge/dashboard.php");
         die;
+
+
+
+        // if ($result->num_rows > 0) {
+        //     while ($row = $result->fetch_assoc()) {
+        //         echo "name: " . $row["name"] . " - phone: " . $row["phone"] . " -email " . $row["email"] . "<br>";
+        //     }
+        // }
     } else {
         $flag = true;
     }

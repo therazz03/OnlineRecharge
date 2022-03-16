@@ -1,3 +1,6 @@
+<?php
+?>
+
 <link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.min.css">
 <script src="bootstrap/bootstrap/js/bootstrap.min.js"></script>
 <script src="bootstrap/bootstrap/js/jquery.min.js"></script>
@@ -59,11 +62,23 @@
               <a class="nav-link Link" href="contact.php">Contact Us</a>
             </li>
           </ul>
-          <a href="login.php">
-            <button class="btn mybtn">Sign In</button></a>
-          <a href="signup.php">
-            <button class="btn mybtn">Sign Up</button>
+          <?php
+          if (isset($_SESSION['username'])) {
+            echo "
+              <a href='distroy.php'>
+                <button class='btn mybtn'>Log Out</button></a>
+            ";
+          } else {
+            echo "
+            <a href='login.php'>
+            <button class='btn mybtn'>Sign In</button></a>
+          <a href='signup.php'>
+            <button class='btn mybtn'>Sign Up</button>
           </a>
+            ";
+          }
+          ?>
+
         </div>
       </div>
     </nav>

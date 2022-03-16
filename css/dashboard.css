@@ -19,6 +19,14 @@
   padding: 14px;
 }
 
+.user-data {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  margin: auto;
+  padding: 5px;
+}
+
 .transactions {
   padding: 24px;
   overflow-x: scroll;
