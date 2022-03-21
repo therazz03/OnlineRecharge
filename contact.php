@@ -1,4 +1,5 @@
 <?php
+session_start();
 $flag = false;
 include('conn.php');
 // if ($conn) {

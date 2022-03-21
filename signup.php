@@ -7,8 +7,9 @@ if (isset($_POST['subbtn'])) {
   $password = hash('sha256', $_POST['passwd']);
   $phone = $_POST['pno'];
   $email = $_POST['uemail'];
+  $balance = 5000;
 
-  $sql = "INSERT INTO `members`(`name`, `password`, `phone`, `email`, `dt`) VALUES ('$name','$password','$phone','$email',current_timestamp())";
+  $sql = "INSERT INTO `members`(`name`, `password`, `phone`, `email`, `balance`, `dt`) VALUES ('$name','$password','$phone','$email', '$balance', current_timestamp())";
   $sql1 = "SELECT * FROM `members` where phone = '$phone' or email = '$email'";
 
   if (mysqli_num_rows($conn->query($sql1)) > 0) {

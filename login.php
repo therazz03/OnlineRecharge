@@ -9,13 +9,14 @@ if (isset($_POST['mybtn'])) {
     $sql = "SELECT * From `members` where phone= '$phone' and password = '$password'";
 
     if (mysqli_num_rows($conn->query($sql)) > 0) {
-        $sql = "SELECT name, phone, email FROM members where phone= '$phone' and password = '$password'";
+        $sql = "SELECT name, phone, email, balance FROM members where phone= '$phone' and password = '$password'";
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
 
         $_SESSION['username'] = $row["name"];
         $_SESSION['phone'] = $row["phone"];
         $_SESSION['email'] = $row["email"];
+        $_SESSION['balance'] = $row["balance"];
 
 
         header("Location: http://localhost/OnlineRecharge/dashboard.php");

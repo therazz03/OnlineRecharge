@@ -1,6 +1,3 @@
-<?php
-?>
-
 <link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.min.css">
 <script src="bootstrap/bootstrap/js/bootstrap.min.js"></script>
 <script src="bootstrap/bootstrap/js/jquery.min.js"></script>
@@ -26,6 +23,13 @@
     background-color: black;
     color: white;
     border: 2px solid white;
+  }
+
+  .username {
+    display: inline;
+    padding: 10px;
+    margin-top: 15px;
+    color: black;
   }
 </style>
 
@@ -63,10 +67,24 @@
             </li>
           </ul>
           <?php
+
+          // <li class='nav-item dropdown btn mybtn ' >
+          // <a class='nav-link dropdown-toggle' href='recharge.php' id='navbarDropdown' role='button' data-bs-toggle='dropdown' aria-expanded='false' style = 'color: black; color:hover:white'>
+          //  " . $_SESSION['username'] . " 
+          // </a>
+          // <ul class='dropdown-menu' aria-labelledby='navbarDropdown' style='background: whitesmoke;'>
+          //   <li><a class='dropdown-item' href='distroy.php'>Log out</a></li>
+          // </ul>
+          // </li>
+
           if (isset($_SESSION['username'])) {
-            echo "
-              <a href='distroy.php'>
-                <button class='btn mybtn'>Log Out</button></a>
+            $username = $_SESSION['username'];
+            echo
+            "<p class='username'>" .
+              ucwords($username) .
+              "</p>" .
+              "<a href='distroy.php'>
+            <button class='btn mybtn'>Log Out</button></a>
             ";
           } else {
             echo "

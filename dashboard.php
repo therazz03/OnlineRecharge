@@ -27,8 +27,9 @@ if (!isset($_SESSION['username'])) {
     <div class="dashboard">
         <div class="user">
             <img src="images/male_avatar.svg" alt="user avatar" style="height: 100px; width: 100px">
-            <!-- this heading will be replaced with php code that will show the current user name and his remaining balance -->
-            <?php echo  "<h3 class='user-data'>" . " Welcome "  . $_SESSION['username'] . "</h3>"  ?>
+
+            <?php echo  "<h3 class='user-data'>" . " Welcome "  . ucwords($_SESSION['username']) . "</h3>"  ?>
+            <?php echo "<h3 class='user-data'>" . "Balance: " . $_SESSION['balance'] . "</h3>" ?>
             <?php echo  "<h3 class='user-data'>" . "Phone: " . $_SESSION['phone'] . "</h3>"  ?>
             <?php echo "<h3 class='user-data'>" . "Email: " . $_SESSION['email'] . "</h3>" ?>
 
