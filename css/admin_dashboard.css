@@ -4,3 +4,8 @@
   box-sizing: border-box;
   font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
 }
+
+.Container {
+  /* height: 70vh; */
+  padding: 2rem;
+}
