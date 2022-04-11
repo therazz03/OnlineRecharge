@@ -36,8 +36,8 @@ Go to the project directory
   cd OnlineRecharge
 ```
 
-Install Xampp Server and copy OnlineRecharge folder into htdocs folder
 
+Install Xampp Server and copy OnlineRecharge folder into htdocs folder and than import ``` onlinerechrage.sql ``` to the phpmyadmin from database folder.
 Start the server
 
 ```bash
