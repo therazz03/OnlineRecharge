@@ -6,7 +6,6 @@ if (isset($_POST['mybtn'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-
     $sql = "SELECT * From `admin` where username= '$username' and password = '$password'";
 
     if (mysqli_num_rows($conn->query($sql)) > 0) {

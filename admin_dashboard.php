@@ -65,7 +65,7 @@ if (isset($_POST['delBtn'])) {
             </tr>
           </tbody>
         </table>
-        <table class="table caption-top">
+        <table class="table table-bordered caption-top">
           <caption>Queries for Support</caption>
           <thead>
             <td>S No.</td>
